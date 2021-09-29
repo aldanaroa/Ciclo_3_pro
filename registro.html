@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar partido</title>
-    <link rel="stylesheet" href="/css/style.css">
 </head>
 <style>
     .titulo{
@@ -15,12 +14,7 @@
     text-align: center;
     }
 
-    .items {
-    border: 1px outset rgb(228, 198, 198);    
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-  } 
+   
   .boton{
     background-color: #67e7b2;
     padding: 1rem 2rem;
@@ -39,22 +33,30 @@
         color: white;
         font-size: 0.6rem;
         padding: 1rem 1rem;
-        text-align:center; 
-                           
+        text-align:center;                          
+    }
+    .registrar:hover{
+        cursor:pointer;
     }
 
-@media (min-width:768px){
+@media {
     form{
         max-width: 900px;
         margin: 3rem auto;
     }
+    .items {
+    border: 1px outset rgb(228, 198, 198);    
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  } 
     .contenedor-campos{
+        text-align: center;
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
     }
     .campo{
-        flex: 0 0 calc(15% - 1rem);
+        flex: 0 1 10%;
     }
 }
 .campo{
@@ -63,8 +65,9 @@
 }
 
     .campo input{
-    flex: 0.5;
+    flex: 0 1 10%;
     height: 2rem;
+    min-width: 4rem;
 }
 </style>
 <body>
@@ -78,7 +81,8 @@
         <div class = "boton"><h1>Fecha</h1></div>
         <div class = "boton"><h1>Local</h1></div>
         <div class = "boton"><h1>Visitante</h1></div>
-        <div class = "boton"><h1>Resultado</h1></div>
+        <div class = "boton"><h1>GL</h1></div>
+        <div class = "boton"><h1>GV</h1></div>
 
     </div>
     <p></p>
@@ -86,7 +90,9 @@
         <div class = "campo"><input type="text" name="fecha" placeholder="fecha"></div>
         <div class = "campo"><input type="text" name="local" placeholder="Local"></div>
         <div class = "campo"><input type="text" name="visitante" placeholder="Visitante"></div>
-        <div class = "campo"><input type="text" name="resultado" placeholder="resultado"></div>
+        <div class = "campo"><input type="text" name="GL" placeholder="Loc"></div>
+        <div class = "campo"><input type="text" name="GV" placeholder="Vis"></div>
+        
 
     </div>
    <div class = "registrar"><h1>Registrar</h1></div>
